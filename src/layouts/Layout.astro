@@ -1,36 +1,96 @@
 ---
 export interface Props {
-	title: string;
+   title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Astro description" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{title}</title>
+   </head>
+   <body>
+      <slot />
+   </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+   :root {
+      --deep-ocean: #182434; /* background */
+      --slate-blue: #6d829b; /* primary */
+      --silver-blue: #8d98aa; /* secondary */
+      --pale-sky: #a3afbc; /* tertiary */
+      --whisper-white: #dcd9d8; /* text */
+   }
+   html {
+      font-family: system-ui, sans-serif;
+      background-color: var(--deep-ocean);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: var(--whisper-white);
+   }
+
+   code {
+      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+         DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+   }
+
+   @keyframes typing {
+      0% {
+         opacity: 0;
+         width: 0%;
+      }
+      64% {
+         opacity: 0;
+         width: 0%;
+      }
+      65% {
+         opacity: 1;
+         width: 0%;
+      }
+      100% {
+         opacity: 1;
+         width: 32%;
+      }
+   }
+
+   @keyframes blink-caret {
+      from,
+      to {
+         border-color: transparent;
+      }
+      50% {
+         border-color: orange;
+      }
+   }
+
+   @keyframes fade {
+      0% {
+         opacity: 0;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+
+   @keyframes init {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 1;
+         transform: translate(0, 0);
+      }
+      100% {
+         opacity: 0;
+         transform: translate(-25%, -25%);
+      }
+   }
 </style>
