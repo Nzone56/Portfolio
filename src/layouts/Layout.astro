@@ -44,20 +44,19 @@ const { title } = Astro.props
 
    @keyframes typing {
       0% {
-         opacity: 0;
+         opacity: 1;
          width: 0%;
-      }
-      64% {
-         opacity: 0;
-         width: 0%;
+         padding: 0;
       }
       65% {
          opacity: 1;
          width: 0%;
+         padding: 0;
       }
       100% {
          opacity: 1;
-         width: 32%;
+         width: 100%;
+         padding: 8px 32px 8px 0;
       }
    }
 
@@ -72,25 +71,36 @@ const { title } = Astro.props
    }
 
    @keyframes fade {
-      0% {
+      from {
          opacity: 0;
       }
-      100% {
+      to {
          opacity: 1;
       }
    }
 
-   @keyframes init {
+   @keyframes initImage {
       0% {
-         opacity: 0;
       }
-      50% {
+
+      65% {
+         transform: translate(0, 0) scale(1);
+      }
+      100% {
+         transform: translate(-210%, -275%) scale(2);
+      }
+   }
+   @keyframes initText {
+      0% {
+      }
+
+      60% {
          opacity: 1;
          transform: translate(0, 0);
       }
       100% {
-         opacity: 0;
-         transform: translate(-25%, -25%);
+         opacity: 1;
+         transform: translate(0, 0);
       }
    }
 </style>

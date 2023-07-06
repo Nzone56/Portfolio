@@ -1,11 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Intro from '../components/intro.astro'
+import Intro from '../components/Intro.astro'
 import Banner from '../components/Banner.astro'
 ---
 
-<Layout title="Julian Pereira | Frotend Developer">
-   <main class="flex items-center justify-center h-screen w-screen">
-      <Intro />
+<Layout title="Julian Pereira | Frontend Developer">
+   <script>
+      setTimeout(() => {
+         const intro = document.getElementById('intro')
+         const banner = document.getElementById('banner')
+
+         intro.style.display = 'none'
+         banner.style.display = 'block'
+      }, 8000)
+   </script>
+
+   <main class="flex h-screen w-screen">
+      <div id="intro" class="flex items-center justify-center w-full h-full">
+         <Intro />
+      </div>
+
+      <div id="banner" style="display: none;">
+         <Banner />
+      </div>
    </main>
 </Layout>

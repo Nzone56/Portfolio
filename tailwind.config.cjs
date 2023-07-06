@@ -4,10 +4,10 @@ module.exports = {
    theme: {
       extend: {
          animation: {
-            fade: 'fade 1.5s linear, init 8s linear ',
+            photoIcon: 'fade 1.5s ease-out, initImage 8s linear forwards',
             typingtic:
-               'typing 2.5s steps(40, end), blink-caret .75s step-end infinite',
-            //
+               'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 8s linear forwards',
+            tic: 'blink-caret .75s step-end infinite',
          },
       },
    },
