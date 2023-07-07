@@ -3,16 +3,21 @@ import Layout from '../layouts/Layout.astro'
 import Intro from '../components/Intro.astro'
 import Banner from '../components/Banner.astro'
 import Header from '../components/Header.astro'
+import About from '../components/About.astro'
 ---
 
 <Layout title="Julian Pereira | Frontend Developer">
    <!-- <div id="intro" class="flex items-center justify-center w-full h-screen">
       <Intro />
    </div> -->
-   <div id="page">
-      <!-- <div id="page" style="display: none"> -->
+   <!-- <div id="page" style="display: none"> -->
+   <div
+      class="h-screen w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-turquoise scrollbar-thumb-rounded"
+      id="page"
+   >
       <Header />
       <Banner />
+      <About />
    </div>
 </Layout>
 
