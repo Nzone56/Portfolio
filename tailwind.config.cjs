@@ -9,6 +9,16 @@ module.exports = {
                'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 8s linear forwards',
             tic: 'blink-caret .75s step-end infinite',
          },
+         colors: {
+            bgBlack: '#292a42',
+            coralRed: '#ff6b6b',
+            darkBlue: '#292a42',
+            turquoise: '#47c1bf',
+            mustard: '#f9c74f',
+         },
+         fontFamily: {
+            logo: ['Big John Bold', 'sans-serif'],
+         },
       },
    },
    plugins: [],
