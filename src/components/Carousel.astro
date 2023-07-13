@@ -1,0 +1,56 @@
+<style>
+   .carousel-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+   }
+
+   .carousel-item {
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      width: 100%;
+      height: 300px;
+   }
+</style>
+
+<script>
+   let currentImage = 0
+   const totalImages = 3
+
+   function nextImage() {
+      currentImage = (currentImage + 1) % totalImages
+      scrollCarousel()
+   }
+
+   function previousImage() {
+      currentImage = (currentImage - 1 + totalImages) % totalImages
+      scrollCarousel()
+   }
+
+   function scrollCarousel() {
+      const carouselContainer = document.getElementById('carousel-container')
+      const carouselItemWidth = carouselContainer.offsetWidth
+      const scrollOffset = carouselItemWidth * currentImage
+      carouselContainer.scrollTo({
+         left: scrollOffset,
+         behavior: 'smooth',
+      })
+   }
+</script>
+
+<div class="carousel-container" id="carousel-container">
+   <div class="carousel-item">
+      <img src="/path/to/image1.jpg" alt="Image 1" />
+   </div>
+   <div class="carousel-item">
+      <img src="/path/to/image2.jpg" alt="Image 2" />
+   </div>
+   <div class="carousel-item">
+      <img src="/path/to/image3.jpg" alt="Image 3" />
+   </div>
+</div>
+
+<div>
+   <button onclick={previousImage}>Previous</button>
+   <button onclick={nextImage}>Next</button>
+</div>

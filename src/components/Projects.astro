@@ -1,54 +1,51 @@
-<style>
-   @-webkit-keyframes tracking-in-contract-bck-top {
-      0% {
-         letter-spacing: 1em;
-         -webkit-transform: translateZ(400px) translateY(-300px);
-         transform: translateZ(400px) translateY(-300px);
-         opacity: 0;
-      }
-      40% {
-         opacity: 0.6;
-      }
-      100% {
-         -webkit-transform: translateZ(0) translateY(0);
-         transform: translateZ(0) translateY(0);
-         opacity: 1;
-      }
-   }
+---
+import Project from '../layouts/Project.astro'
+---
 
-   @keyframes tracking-in-contract-bck-top {
-      0% {
-         letter-spacing: 1em;
-         -webkit-transform: translateZ(400px) translateY(-300px);
-         transform: translateZ(400px) translateY(-300px);
-         opacity: 0;
-      }
-      40% {
-         opacity: 0.6;
-      }
-      100% {
-         -webkit-transform: translateZ(0) translateY(0);
-         transform: translateZ(0) translateY(0);
-         opacity: 1;
-      }
-   }
-   .tracking-in-contract-bck-top {
-      -webkit-animation: tracking-in-contract-bck-top 2s
-         cubic-bezier(0.215, 0.61, 0.355, 1) both;
-      animation: tracking-in-contract-bck-top 2s
-         cubic-bezier(0.215, 0.61, 0.355, 1) both;
-   }
-</style>
-
-<section
-   class="flex flex-col items-center relative min-h-full h-auto bg-turquoise"
->
+<section class="flex flex-col items-center relative min-h-full h-auto bg-white">
    <h2
       id="heading"
-      class="relative font-bold bg-gradient-to-r from-coralRed via-mustard to-white text-transparent bg-clip-text px-16 py-8 m-16 text-5xl"
+      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 m-16 text-5xl"
    >
       PROJECTS
-      <span class="after w-full bg-coralRed"></span>
+      <span class="after w-full bg-turquoise"></span>
    </h2>
-   <h2 class="tracking-in-contract-bck-top">UWUWUUW</h2>
+   <div>
+      <Project
+         title="Create Your League"
+         body="Este proyecto es un simulador de ligas de fútbol que te permite escoger entre las 5 grandes ligas de la temporada 22/23 y simular resultados de partidos para obtener una tabla de posiciones actualizada. Además de ser una herramienta divertida para los fanáticos del fútbol, también proporciona información detallada sobre cada liga y los equipos participantes."
+         chars={[
+            {
+               title: 'Selección de Liga',
+               body: 'Los usuarios pueden elegir entre las 5 grandes ligas de fútbol (por ejemplo, Premier League, La Liga, Serie A, Bundesliga, Ligue 1) de la temporada 22/23.',
+            },
+            {
+               title: 'Simulación de Resultados',
+               body: 'Los usuarios pueden simular partidos y obtener resultados realistas para cada equipo en la liga seleccionada.',
+            },
+            {
+               title: 'Tabla de Posiciones',
+               body: 'Después de cada simulación, se genera una tabla de posiciones actualizada, que muestra la posición, puntos, partidos jugados, victorias, empates y derrotas de cada equipo.',
+            },
+            {
+               title: 'Información de la Liga',
+               body: 'Se proporciona información detallada sobre la liga seleccionada, como la historia de la liga, reglas, formato de competición y premios.',
+            },
+            {
+               title: 'Perfiles de Equipos',
+               body: 'Los usuarios pueden acceder a perfiles individuales de cada equipo, donde se muestra su escudo, nombre, estadio, entrenador y jugadores.',
+            },
+         ]}
+         pagehref="#"
+         githref="#"
+         src="CYL"
+      />
+      <!-- <Project
+         title="Journal Page"
+         body="uwu"
+         pagehref="#"
+         githref="#"
+         src="Journal"
+      /> -->
+   </div>
 </section>

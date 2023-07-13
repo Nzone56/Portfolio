@@ -15,7 +15,7 @@ module.exports = {
                'tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;',
          },
          colors: {
-            bgBlack: '#292a42',
+            bgBlack: '#060918',
             coralRed: '#ff6b6b',
             darkTeal: '#005B5B',
             turquoise: '#47c1bf',

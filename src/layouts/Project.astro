@@ -1,0 +1,51 @@
+---
+export interface Props {
+   title: string
+   body: string
+   chars: { title: string; body: string }[]
+   githref: string
+   pagehref: string
+   src: string
+}
+
+const { title, body, githref, pagehref, src, chars } = Astro.props
+---
+
+<div class="flex text-cyan-600 text-lg">
+   <picture class="m-8 w-1/2">
+      <img
+         src=`../../src/assets/img/Projects/${src}/first.jpg`
+         alt="Photo of me"
+         class="block w-full"
+      /></picture
+   >
+   <div class="w-1/2">
+      <h2 class="m-8 text-4xl font-bold">{title}</h2>
+      <p class="m-8 text-justify">{body}</p>
+      <ul class="m-8">
+         {
+            chars.map((char) => {
+               return (
+                  <li class="mb-2">
+                     <span class="font-bold">{char.title}:</span> {char.body}
+                  </li>
+               )
+            })
+         }
+      </ul>
+      <div class="flex justify-center m-8">
+         <a
+            href={pagehref}
+            class="m-8 p-4 border-2 border-cyan-600 hover:text-white hover:bg-cyan-600 transition duration-500"
+         >
+            VISIT WEBSITE</a
+         >
+         <a
+            href={githref}
+            class="m-8 p-4 border-2 border-cyan-600 hover:text-white hover:bg-cyan-600 transition duration-500"
+         >
+            GITHUB REPO</a
+         >
+      </div>
+   </div>
+</div>
