@@ -1,0 +1,18 @@
+---
+import Proficiencies from './Proficiencies.astro'
+import Techs from './Techs.astro'
+---
+
+<section class="flex flex-col items-center relative min-h-full h-auto bg-white">
+   <h2
+      id="heading"
+      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 m-16 text-5xl"
+   >
+      SKILLS
+      <span class="after w-full"></span>
+   </h2>
+   <div class="flex">
+      <Techs />
+      <Proficiencies />
+   </div>
+</section>

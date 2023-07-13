@@ -14,8 +14,9 @@ module.exports = {
          colors: {
             bgBlack: '#292a42',
             coralRed: '#ff6b6b',
-            darkBlue: '#292a42',
+            darkTeal: '#005B5B',
             turquoise: '#47c1bf',
+            orangeTeal: '#FD5901',
             mustard: '#f9c74f',
          },
          fontFamily: {
