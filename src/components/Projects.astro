@@ -1,3 +1,45 @@
+<style>
+   @-webkit-keyframes tracking-in-contract-bck-top {
+      0% {
+         letter-spacing: 1em;
+         -webkit-transform: translateZ(400px) translateY(-300px);
+         transform: translateZ(400px) translateY(-300px);
+         opacity: 0;
+      }
+      40% {
+         opacity: 0.6;
+      }
+      100% {
+         -webkit-transform: translateZ(0) translateY(0);
+         transform: translateZ(0) translateY(0);
+         opacity: 1;
+      }
+   }
+
+   @keyframes tracking-in-contract-bck-top {
+      0% {
+         letter-spacing: 1em;
+         -webkit-transform: translateZ(400px) translateY(-300px);
+         transform: translateZ(400px) translateY(-300px);
+         opacity: 0;
+      }
+      40% {
+         opacity: 0.6;
+      }
+      100% {
+         -webkit-transform: translateZ(0) translateY(0);
+         transform: translateZ(0) translateY(0);
+         opacity: 1;
+      }
+   }
+   .tracking-in-contract-bck-top {
+      -webkit-animation: tracking-in-contract-bck-top 2s
+         cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      animation: tracking-in-contract-bck-top 2s
+         cubic-bezier(0.215, 0.61, 0.355, 1) both;
+   }
+</style>
+
 <section
    class="flex flex-col items-center relative min-h-full h-auto bg-turquoise"
 >
@@ -8,4 +50,5 @@
       PROJECTS
       <span class="after w-full bg-coralRed"></span>
    </h2>
+   <h2 class="tracking-in-contract-bck-top">UWUWUUW</h2>
 </section>

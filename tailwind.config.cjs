@@ -10,6 +10,9 @@ module.exports = {
             tic: 'blink-caret .75s step-end infinite',
             appearLeft: 'slideInFromLeft 1s ease-out forwards',
             appearBottom: 'slideInFromBot 1s ease-out forwards',
+            flicker: 'flicker-in-1 3s linear both',
+            trackIn:
+               'tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;',
          },
          colors: {
             bgBlack: '#292a42',
