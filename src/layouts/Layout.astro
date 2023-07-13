@@ -39,11 +39,11 @@ const { title } = Astro.props
       color: white;
    }
 
-   a.relative {
+   .relative {
       display: inline-block;
    }
 
-   a.relative .after {
+   .after {
       content: '';
       position: absolute;
       bottom: -2px;
@@ -54,7 +54,7 @@ const { title } = Astro.props
       transition: width 0.4s ease-out;
    }
 
-   a.relative:hover .after {
+   .relative:hover .after {
       width: 100%;
    }
 
@@ -123,6 +123,26 @@ const { title } = Astro.props
       100% {
          opacity: 1;
          transform: translate(0, 0);
+      }
+   }
+   @keyframes slideInFromLeft {
+      0% {
+         transform: translateX(-25%);
+         opacity: 0;
+      }
+      100% {
+         transform: translateX(0);
+         opacity: 1;
+      }
+   }
+   @keyframes slideInFromBot {
+      0% {
+         transform: translateY(25%);
+         opacity: 0;
+      }
+      100% {
+         transform: translateX(0);
+         opacity: 1;
       }
    }
 </style>

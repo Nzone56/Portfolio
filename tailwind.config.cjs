@@ -8,6 +8,8 @@ module.exports = {
             typingtic:
                'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 8s linear forwards',
             tic: 'blink-caret .75s step-end infinite',
+            appearLeft: 'slideInFromLeft 1s ease-out forwards',
+            appearBottom: 'slideInFromBot 1s ease-out forwards',
          },
          colors: {
             bgBlack: '#292a42',
