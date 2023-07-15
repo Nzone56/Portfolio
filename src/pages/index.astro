@@ -25,7 +25,11 @@ import Animation from '../components/Animation.astro'
    > -->
 
    <div class="h-screen w-full" style="display: none" id="page">
-      <Header />
+      <div
+         class="flex px-8 py-6 items-center justify-between fixed top-0 w-full bg-transparent z-10"
+      >
+         <Header />
+      </div>
       <Banner />
       <About />
       <Skills />
@@ -43,5 +47,5 @@ import Animation from '../components/Animation.astro'
 
       intro.style.display = 'none'
       page.style.display = 'block'
-   }, 9000)
+   }, 10000)
 </script>

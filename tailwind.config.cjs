@@ -5,7 +5,7 @@ module.exports = {
       extend: {
          animation: {
             photoIcon: 'fade 1.5s ease-out, initImage 8s linear forwards',
-            header: 'slide-header 8.5s linear forwards',
+            header: 'slide-header 8s linear forwards',
             hi: 'fade-name 10s linear forwards',
             bg: 'fade-bg 10s linear forwards',
             test: 'fade-test 12s linear forwards',
