@@ -1,13 +1,18 @@
 window.addEventListener('scroll', function () {
-   var header = document.getElementById('header')
+   var headers = document.querySelectorAll('#header')
    var banner = document.getElementById('banner')
 
    var bannerRect = banner.getBoundingClientRect()
 
-   console.log(bannerRect.top)
    if (bannerRect.top < -1200) {
-      header.style.backgroundColor = 'black'
+      headers.forEach(function (header) {
+         var headerElement = header as HTMLElement // Type assertion to HTMLElement
+         headerElement.style.backgroundColor = 'black'
+      })
    } else {
-      header.style.backgroundColor = 'transparent'
+      headers.forEach(function (header) {
+         var headerElement = header as HTMLElement // Type assertion to HTMLElement
+         headerElement.style.backgroundColor = 'transparent'
+      })
    }
 })

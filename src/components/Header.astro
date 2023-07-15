@@ -12,53 +12,46 @@ import Social from './Social.astro'
    }
 </style>
 
-<header
-   id="header"
-   class="flex px-8 py-6 items-center justify-between fixed top-0 w-full bg-transparent z-10"
->
-   <div class="flex flex-grow basis-0">
-      <span
-         class="mx-2 font-bold font-logo text-xl transition duration-400 ease-in-out transform hover:scale-125 hover:text-turquoise"
-      >
-         <a href="/"> JP</a></span
-      >
-   </div>
-   <nav>
-      <ul
-         class="flex text-lg [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
-      >
-         <li>
-            <a class="relative navbar-item" href="#">
-               Home<span class="after"></span></a
-            >
-         </li>
-         <li>
-            <a class="relative navbar-item" href="#about">
-               About<span class="after"></span></a
-            >
-         </li>
-         <li>
-            <a class="relative navbar-item" href="#skills">
-               Skills<span class="after"></span></a
-            >
-         </li>
-         <li>
-            <a class="relative navbar-item" href="#projects">
-               Projects<span class="after"></span></a
-            >
-         </li>
-         <li>
-            <a class="relative navbar-item" href="#contact">
-               Contact<span class="after"></span></a
-            >
-         </li>
-      </ul>
-   </nav>
-   <nav class="flex flex-grow basis-0 justify-end">
-      <ul
-         class="flex items-center [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
-      >
-         <Social />
-      </ul>
-   </nav>
-</header>
+<div class="flex flex-grow basis-0">
+   <span
+      class="mx-2 font-bold font-logo text-xl transition duration-400 ease-in-out transform hover:scale-125 hover:text-turquoise"
+   >
+      <a href="/"> JP</a></span
+   >
+</div>
+<nav>
+   <ul class="flex text-lg [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+      <li>
+         <a class="relative navbar-item" href="#">
+            Home<span class="after"></span></a
+         >
+      </li>
+      <li>
+         <a class="relative navbar-item" href="#about">
+            About<span class="after"></span></a
+         >
+      </li>
+      <li>
+         <a class="relative navbar-item" href="#skills">
+            Skills<span class="after"></span></a
+         >
+      </li>
+      <li>
+         <a class="relative navbar-item" href="#projects">
+            Projects<span class="after"></span></a
+         >
+      </li>
+      <li>
+         <a class="relative navbar-item" href="#contact">
+            Contact<span class="after"></span></a
+         >
+      </li>
+   </ul>
+</nav>
+<nav class="flex flex-grow basis-0 justify-end">
+   <ul
+      class="flex items-center [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+   >
+      <Social />
+   </ul>
+</nav>

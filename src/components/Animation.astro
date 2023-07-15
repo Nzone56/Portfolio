@@ -2,18 +2,16 @@
 import Header from '../components/Header.astro'
 ---
 
-<div
+<header
+   id="header"
    class="animate-header flex px-8 py-6 items-center justify-between fixed top-0 w-full bg-transparent z-10"
 >
    <Header />
-</div>
+</header>
 
 <div>
    <!--  AFTER -->
-   <section
-      id="banner"
-      class="absolute top-0 left-0 h-full w-full opacity-90 bg-black z-1"
-   >
+   <section class="absolute top-0 left-0 h-full w-full opacity-90 bg-black z-1">
       <div class="flex items-center justify-center h-full relative z-10">
          <picture class="animate-photoIcon p-20">
             <img
