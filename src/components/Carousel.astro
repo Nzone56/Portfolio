@@ -1,56 +1,84 @@
-<style>
-   .carousel-container {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-   }
+---
+import CarouselItem from '../layouts/CarouselItem.astro'
+---
 
-   .carousel-item {
-      flex-shrink: 0;
-      scroll-snap-align: start;
-      width: 100%;
-      height: 300px;
-   }
-</style>
+<script src="../helpers/carousel.ts"></script>
 
-<script>
-   let currentImage = 0
-   const totalImages = 3
+<section
+   id="carousel"
+   class="flex flex-col items-center relative min-h-full h-auto bg-bgBlack"
+>
+   <h2
+      id="heading"
+      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 mt-16 text-5xl"
+   >
+      OTHER PROJECTS
+      <span class="after w-full bg-turquoise"></span>
+   </h2>
 
-   function nextImage() {
-      currentImage = (currentImage + 1) % totalImages
-      scrollCarousel()
-   }
+   <div class="flex justify-center">
+      <button id="prev">
+         <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="2em"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            class="contact-icon"
+            ><path
+               d="M459.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4L288 214.3V256v41.7L459.5 440.6zM256 352V256 128 96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160C4.2 237.5 0 246.5 0 256s4.2 18.5 11.5 24.6l192 160c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V352z"
+            ></path></svg
+         ></button
+      >
+      <div class="relative overflow-hidden m-16 w-3/5">
+         <ul class="carousel-images">
+            <CarouselItem
+               link="https://github.com/Nzone56/CountriesApp"
+               imageUrl="../../src/assets/img/projects/Countries.png"
+               title="Countries App"
+               description="Discover and explore a dynamic web page showcasing countries worldwide. Search and find detailed information about geography, culture, and history. Expand your knowledge about diverse nations."
+            />
+            <CarouselItem
+               link="https://github.com/Nzone56/react-gif-expert"
+               imageUrl="../../src/assets/img/projects/Gif.png"
+               title="Gif App"
+               description="Search and collect the top 10 trending GIFs related to your query on our dynamic web page. Express yourself with visually engaging animated GIFs in conversations and social media."
+            />
 
-   function previousImage() {
-      currentImage = (currentImage - 1 + totalImages) % totalImages
-      scrollCarousel()
-   }
+            <CarouselItem
+               link="https://github.com/Nzone56/HeroPage"
+               imageUrl="../../src/assets/img/projects/Heroes.png"
+               title="Heroes App"
+               description="Discover and explore a dynamic web page featuring DC and Marvel heroes. Search heroes by name and delve into detailed pages with descriptions of their powers and origins."
+            />
 
-   function scrollCarousel() {
-      const carouselContainer = document.getElementById('carousel-container')
-      const carouselItemWidth = carouselContainer.offsetWidth
-      const scrollOffset = carouselItemWidth * currentImage
-      carouselContainer.scrollTo({
-         left: scrollOffset,
-         behavior: 'smooth',
-      })
-   }
-</script>
+            <CarouselItem
+               link="https://github.com/ncondes/sound-scape"
+               imageUrl="../../src/assets/img/projects/SoundScape.png"
+               title="SoundScape"
+               description="Explore a dynamic web page for audio enthusiasts, akin to SoundCloud. Discover and enjoy a variety of music and ambient sounds in an immersive experience."
+            />
 
-<div class="carousel-container" id="carousel-container">
-   <div class="carousel-item">
-      <img src="/path/to/image1.jpg" alt="Image 1" />
+            <CarouselItem
+               link="https://github.com/Nzone56/KaguyaClonePage"
+               imageUrl="../../src/assets/img/projects/Kaguya.png"
+               title="Kaguya Page"
+               description="A recreation of the official Kaguya-sama: Love is War website, a popular anime and manga series."
+            />
+         </ul>
+      </div>
+
+      <button id="next">
+         <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="2em"
+            viewBox="0 0 512 512"
+            fill="currentColor"
+            class="contact-icon"
+            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+               d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"
+            ></path></svg
+         ></button
+      >
    </div>
-   <div class="carousel-item">
-      <img src="/path/to/image2.jpg" alt="Image 2" />
-   </div>
-   <div class="carousel-item">
-      <img src="/path/to/image3.jpg" alt="Image 3" />
-   </div>
-</div>
-
-<div>
-   <button onclick={previousImage}>Previous</button>
-   <button onclick={nextImage}>Next</button>
-</div>
+</section>

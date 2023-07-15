@@ -6,12 +6,16 @@ import Header from '../components/Header.astro'
 import About from '../components/About.astro'
 import Skills from '../components/Skills.astro'
 import Projects from '../components/Projects.astro'
+import Carousel from '../components/Carousel.astro'
+import Contact from '../components/Contact.astro'
+import Footer from '../components/Footer.astro'
+import Animation from '../components/Animation.astro'
 ---
 
 <Layout title="Julian Pereira | Frontend Developer">
-   <!-- <div id="intro" class="flex items-center justify-center w-full h-screen">
-      <Intro />
-   </div> -->
+   <div id="intro" class="flex items-center justify-center w-full h-screen">
+      <Animation />
+   </div>
    <!-- <div id="page" style="display: none"> -->
 
    <!-- FOR CUSTOM SCROLLBAR -->
@@ -20,21 +24,24 @@ import Projects from '../components/Projects.astro'
       id="page"
    > -->
 
-   <div class="h-screen w-full" id="page">
+   <div class="h-screen w-full" style="display: none" id="page">
       <Header />
       <Banner />
       <About />
       <Skills />
       <Projects />
+      <Carousel />
+      <Contact />
+      <Footer />
    </div>
 </Layout>
 
-<!-- <script>
+<script>
    setTimeout(() => {
       const intro = document.getElementById('intro')
       const page = document.getElementById('page')
 
       intro.style.display = 'none'
       page.style.display = 'block'
-   }, 8000)
-</script> -->
+   }, 9000)
+</script>

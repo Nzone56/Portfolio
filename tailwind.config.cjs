@@ -5,16 +5,38 @@ module.exports = {
       extend: {
          animation: {
             photoIcon: 'fade 1.5s ease-out, initImage 8s linear forwards',
+            header: 'slide-header 8.5s linear forwards',
+            hi: 'fade-name 10s linear forwards',
+            bg: 'fade-bg 10s linear forwards',
+            test: 'fade-test 12s linear forwards',
             typingtic:
                'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 8s linear forwards',
-            tic: 'blink-caret .75s step-end infinite',
+            ticBefore:
+               'blink-caret .75s step-end infinite, fade-name 10s linear forwards',
+            ticAfter: 'blink-caret .75s step-end infinite',
             appearLeft: 'slideInFromLeft 1s ease-out forwards',
             appearBottom: 'slideInFromBot 1s ease-out forwards',
-            flicker: 'flicker-in-1 3s linear both',
+            slideIn:
+               'slide-in 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
             trackIn:
                'tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;',
+            heartbeat: 'heartbeat 1.5s ease-in-out infinite both',
          },
          colors: {
+            primary: {
+               50: '#eff6ff',
+               100: '#dbeafe',
+               200: '#bfdbfe',
+               300: '#93c5fd',
+               400: '#60a5fa',
+               500: '#3b82f6',
+               600: '#2563eb',
+               700: '#1d4ed8',
+               800: '#1e40af',
+               900: '#1e3a8a',
+               950: '#172554',
+            },
+            almostBlack: '#010404',
             bgBlack: '#060918',
             coralRed: '#ff6b6b',
             darkTeal: '#005B5B',

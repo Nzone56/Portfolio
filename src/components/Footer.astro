@@ -1,0 +1,26 @@
+---
+import Social from './Social.astro'
+---
+
+<footer class="flex bg-black w-full justify-center">
+   <div class="text-center text-white m-16 mt-8 mb-0">
+      <a
+         href="#about"
+         class="font-bold text-xl transition duration-300 hover:text-turquoise"
+      >
+         JULIAN PEREIRA
+      </a>
+
+      <nav class="mt-8 mb-2 flex flex-grow basis-0 justify-center">
+         <ul
+            class="flex items-center [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+         >
+            <Social />
+         </ul>
+      </nav>
+      <hr />
+      <p class="text-center p-4 text-sm">
+         © Copyright 2023. Made by Julian Pereira
+      </p>
+   </div>
+</footer>

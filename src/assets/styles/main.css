@@ -1,0 +1,155 @@
+/* TODO: BREAKPOINTS 1024 & 768  */
+
+:root {
+   --dark-purple: #292a42; /* background */
+   --slate-blue: #6d829b; /* primary */
+   --silver-blue: #8d98aa; /* secondary */
+   --turquoise: #47c1bf; /* tertiary */
+   --whisper-white: #dcd9d8; /* text */
+}
+html {
+   font-family: system-ui, sans-serif;
+   scroll-behavior: smooth;
+   background-color: black;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: white;
+   overflow-y: scroll;
+}
+.portrait-intro {
+   width: 115px;
+   height: 115px;
+}
+.portrait {
+   width: 112px;
+   height: 115px;
+   transform: scale(2.6, 3.2);
+}
+
+.relative {
+   display: inline-block;
+}
+
+.after {
+   content: '';
+   position: absolute;
+   bottom: -2px;
+   left: 0;
+   width: 0;
+   height: 2px;
+   background-color: turquoise;
+   transition: width 0.4s ease-out;
+}
+
+.relative:hover .after {
+   width: 100%;
+}
+
+.carousel-images {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   transition: transform 0.5s;
+}
+.carousel-images li {
+   flex: 0 0 100%;
+}
+
+.carousel-images img {
+   width: 100%;
+   height: auto;
+}
+li:hover img {
+   opacity: 0.2;
+}
+
+li:hover div {
+   opacity: 100;
+}
+
+@font-face {
+   font-family: 'Big John Bold';
+   src: local('BigJohnPRO-Bold'),
+      url('../../src/assets/fonts/BigJohnPRO-Bold.otf') format('opentype');
+}
+
+@keyframes blink-caret {
+   from,
+   to {
+      border-color: transparent;
+   }
+   50% {
+      border-color: var(--turquoise);
+   }
+}
+
+@keyframes slideInFromLeft {
+   0% {
+      transform: translateX(-25%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+@keyframes slideInFromBot {
+   0% {
+      transform: translateY(25%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes tracking-in-expand {
+   0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+   }
+   40% {
+      opacity: 0.6;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+@keyframes slide-in {
+   0% {
+      transform: translateX(800px) rotateY(-30deg) scale(0);
+      transform-origin: -100% 50%;
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0) rotateY(0) scale(1);
+      transform-origin: -1800px 50%;
+      opacity: 1;
+   }
+}
+@keyframes heartbeat {
+   from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+   }
+   10% {
+      transform: scale(1.09);
+      animation-timing-function: ease-in;
+   }
+   17% {
+      transform: scale(1.02);
+      animation-timing-function: ease-out;
+   }
+   33% {
+      transform: scale(1.13);
+      animation-timing-function: ease-in;
+   }
+   45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+   }
+}

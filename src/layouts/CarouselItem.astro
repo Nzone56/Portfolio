@@ -1,0 +1,26 @@
+---
+export interface Props {
+   link: string
+   imageUrl: string
+   title: string
+   description: string
+}
+
+const { link, imageUrl, title, description } = Astro.props
+---
+
+<li class="relative">
+   <a href={link} target="_blank" class="inline-block relative">
+      <img
+         src={imageUrl}
+         alt={title}
+         class="border-2 border-bgBlack carousel-img block w-1/2 transition-opacity duration-300"
+      />
+      <div
+         class="opacity-0 text-white absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center duration-300 transition"
+      >
+         <h2 class="text-2xl font-bold">{title}</h2>
+         <p class="text-lg my-8 mx-16 text-center">{description}</p>
+      </div>
+   </a>
+</li>

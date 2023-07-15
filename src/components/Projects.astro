@@ -2,10 +2,13 @@
 import Project from '../layouts/Project.astro'
 ---
 
-<section class="flex flex-col items-center relative min-h-full h-auto bg-white">
+<section
+   id="projects"
+   class="flex flex-col items-center relative min-h-full h-auto bg-white"
+>
    <h2
-      id="heading"
-      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 m-16 text-5xl"
+      id="heading-project"
+      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 m-16 text-5xl opacity-0"
    >
       PROJECTS
       <span class="after w-full bg-turquoise"></span>
@@ -13,39 +16,57 @@ import Project from '../layouts/Project.astro'
    <div>
       <Project
          title="Create Your League"
-         body="Este proyecto es un simulador de ligas de fútbol que te permite escoger entre las 5 grandes ligas de la temporada 22/23 y simular resultados de partidos para obtener una tabla de posiciones actualizada. Además de ser una herramienta divertida para los fanáticos del fútbol, también proporciona información detallada sobre cada liga y los equipos participantes."
+         body="A Football League simulator that lets you select from the 5 major leagues of the 22/23 season and simulate match outcomes to generate an up-to-date league table. It offers an enjoyable experience for football enthusiasts"
          chars={[
             {
-               title: 'Selección de Liga',
-               body: 'Los usuarios pueden elegir entre las 5 grandes ligas de fútbol (por ejemplo, Premier League, La Liga, Serie A, Bundesliga, Ligue 1) de la temporada 22/23.',
+               title: 'League Selection',
+               body: 'Users can choose from Premier League, La Liga, Serie A, Bundesliga, Ligue 1 of the 22/23 season.',
             },
             {
-               title: 'Simulación de Resultados',
-               body: 'Los usuarios pueden simular partidos y obtener resultados realistas para cada equipo en la liga seleccionada.',
+               title: 'Results Simulation',
+               body: 'Users can simulate matches by creating his own results  for each team.',
             },
             {
-               title: 'Tabla de Posiciones',
-               body: 'Después de cada simulación, se genera una tabla de posiciones actualizada, que muestra la posición, puntos, partidos jugados, victorias, empates y derrotas de cada equipo.',
+               title: 'League Table',
+               body: 'After each simulation, an updated league table is generated, showing the position, points, matches played, wins, draws, and losses of each team.',
             },
             {
-               title: 'Información de la Liga',
-               body: 'Se proporciona información detallada sobre la liga seleccionada, como la historia de la liga, reglas, formato de competición y premios.',
-            },
-            {
-               title: 'Perfiles de Equipos',
-               body: 'Los usuarios pueden acceder a perfiles individuales de cada equipo, donde se muestra su escudo, nombre, estadio, entrenador y jugadores.',
+               title: 'League Information',
+               body: 'Detailed information is provided about the selected league, and their clubs.',
             },
          ]}
          pagehref="#"
-         githref="#"
+         githref="https://github.com/Nzone56/CreateYourLeague"
          src="CYL"
       />
-      <!-- <Project
-         title="Journal Page"
-         body="uwu"
+      <Project
+         title="Journal App"
+         body="A Journaling app that features login/registration and allows you to manage multiple notes with titles, body text, and image uploads."
+         chars={[
+            {
+               title: 'Efficient development',
+               body: 'React, Vite, and Material UI for efficient development.',
+            },
+            {
+               title: 'State management with Redux',
+               body: 'Redux handles global state management.',
+            },
+            {
+               title: 'Asynchronous operations',
+               body: 'Redux Toolkit and RTK Query for asynchronous operations and data fetching.',
+            },
+            {
+               title: 'CRUD operations with Firestore',
+               body: 'Complete data management with Firestore for CRUD operations.',
+            },
+            {
+               title: 'Login and logout functionalities',
+               body: 'Secure login and logout functionalities, including Google authentication.',
+            },
+         ]}
          pagehref="#"
-         githref="#"
-         src="Journal"
-      /> -->
+         githref="https://github.com/Nzone56/journal-app"
+         src="journal"
+      />
    </div>
 </section>
