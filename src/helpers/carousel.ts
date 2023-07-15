@@ -1,12 +1,26 @@
-const carouselImages = document.querySelector('.carousel-images') as HTMLElement
-
-const carouselImageWidth = carouselImages.clientWidth
-
-let currentPosition = 0
-let intervalId
-
 const buttonPrev = document.getElementById('prev')
 const buttonNext = document.getElementById('next')
+let carouselImages, carouselImageWidth, currentPosition, intervalId
+
+const observeSectionDisplay = () => {
+   const pageSection = document.getElementById('page')
+   const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+         if (
+            mutation.type === 'attributes' &&
+            mutation.attributeName === 'style'
+         ) {
+            const { display } = getComputedStyle(pageSection)
+            if (display === 'block') {
+               startCarousel()
+            } else {
+               stopCarousel()
+            }
+         }
+      }
+   })
+   observer.observe(pageSection, { attributes: true })
+}
 
 const slideNext = () => {
    currentPosition -= carouselImageWidth
@@ -35,7 +49,21 @@ const slidePrev = () => {
    intervalId = setInterval(slideNext, 3000)
 }
 
-intervalId = setInterval(slideNext, 3000)
+const startCarousel = () => {
+   carouselImages = document.querySelector('.carousel-images')
+   carouselImageWidth = carouselImages.clientWidth
+   currentPosition = 0
 
-buttonPrev.addEventListener('click', slidePrev)
-buttonNext.addEventListener('click', slideNext)
+   intervalId = setInterval(slideNext, 3000)
+
+   buttonPrev.addEventListener('click', slidePrev)
+   buttonNext.addEventListener('click', slideNext)
+}
+
+const stopCarousel = () => {
+   clearInterval(intervalId)
+   buttonPrev.removeEventListener('click', slidePrev)
+   buttonNext.removeEventListener('click', slideNext)
+}
+
+observeSectionDisplay()

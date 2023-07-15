@@ -72,7 +72,7 @@ li:hover div {
 @font-face {
    font-family: 'Big John Bold';
    src: local('BigJohnPRO-Bold'),
-      url('../../src/assets/fonts/BigJohnPRO-Bold.otf') format('opentype');
+      url('assets/fonts/BigJohnPRO-Bold.otf') format('opentype');
 }
 
 @keyframes blink-caret {
