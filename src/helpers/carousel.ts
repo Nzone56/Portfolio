@@ -23,7 +23,6 @@ const observeSectionDisplay = () => {
 }
 
 const slideNext = () => {
-   console.log(currentPosition, carouselImageWidth)
    currentPosition -= carouselImageWidth
 
    if (
@@ -39,7 +38,6 @@ const slideNext = () => {
 }
 
 const slidePrev = () => {
-   console.log('work')
    currentPosition += carouselImageWidth
    if (currentPosition > 0) {
       currentPosition =
