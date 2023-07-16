@@ -10,18 +10,28 @@
    .tech-icon:hover {
       filter: none;
    }
+
+   @media screen and (max-width: 1280px) {
+      .tech-icon {
+         height: 4rem;
+         width: 4rem;
+      }
+   }
 </style>
 
-<div class="w-1/2">
+<div class="lg:w-1/2 w-full">
    <h2
       id="sub-heading-techs"
-      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text p-4 mx-16 my-8 text-4xl opacity-0"
+      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text p-4 mx-16 my-8 xl:text-4xl lg:text-3xl text-3xl sm:text-4xl opacity-0"
    >
       TECHS
       <span class="after w-full"></span>
    </h2>
 
-   <div id="techs" class="flex flex-wrap justify-center my-8 mx-16 opacity-0">
+   <div
+      id="techs"
+      class="flex flex-wrap justify-center mx-8 xl:mx-16 my-8 opacity-0"
+   >
       <img src="assets/img/Tech/html5.svg" alt="HTML5 logo" class="tech-icon" />
       <img src="assets/img/Tech/css3.svg" alt="CSS3 logo" class="tech-icon" />
       <img

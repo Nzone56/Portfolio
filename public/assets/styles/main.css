@@ -1,5 +1,3 @@
-/* TODO: BREAKPOINTS 1024 & 768  */
-
 :root {
    --dark-purple: #292a42; /* background */
    --slate-blue: #6d829b; /* primary */
@@ -24,7 +22,7 @@ html {
 .portrait {
    width: 112px;
    height: 115px;
-   transform: scale(2.6, 3.2);
+   transform: scale(2.6, 3.3);
 }
 
 .relative {
@@ -151,5 +149,27 @@ li:hover div {
    45% {
       transform: scale(1);
       animation-timing-function: ease-out;
+   }
+}
+@media screen and (max-width: 1023px) {
+   .portrait-intro {
+      width: 115px;
+      height: 115px;
+   }
+   .portrait {
+      width: 112px;
+      height: 115px;
+      transform: scale(2.1, 2.1);
+   }
+}
+@media screen and (max-width: 640px) {
+   .portrait-intro {
+      width: 250px;
+      height: 250px;
+   }
+   .portrait {
+      width: 150px;
+      height: 150px;
+      transform: scale(1.5, 1.5);
    }
 }

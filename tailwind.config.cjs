@@ -8,9 +8,9 @@ module.exports = {
             header: 'slide-header 8s linear forwards',
             hi: 'fade-name 10s linear forwards',
             bg: 'fade-bg 10s linear forwards',
-            test: 'fade-test 12s linear forwards',
+
             typingtic:
-               'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 8s linear forwards',
+               'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 7s ease-out forwards',
             ticBefore:
                'blink-caret .75s step-end infinite, fade-name 10s linear forwards',
             ticAfter: 'blink-caret .75s step-end infinite',

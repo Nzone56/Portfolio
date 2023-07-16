@@ -1,20 +1,15 @@
 ---
 import CarouselItem from '../layouts/CarouselItem.astro'
+import Title from './Title.astro'
 ---
 
 <script src="/src/helpers/carousel.ts"></script>
 
 <section
    id="carousel"
-   class="flex flex-col items-center relative min-h-full h-auto bg-bgBlack"
+   class="flex flex-col items-center relative h-auto bg-bgBlack"
 >
-   <h2
-      id="heading"
-      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 mt-16 text-5xl"
-   >
-      OTHER PROJECTS
-      <span class="after w-full bg-turquoise"></span>
-   </h2>
+   <Title title="OTHER PROJECTS " id="heading-carousel" />
 
    <div class="flex justify-center">
       <button id="prev">
@@ -29,38 +24,38 @@ import CarouselItem from '../layouts/CarouselItem.astro'
             ></path></svg
          ></button
       >
-      <div class="relative overflow-hidden m-16 w-3/5">
+      <div class="relative overflow-hidden m-8 lg:m-16 w-4/5 lg:w-8/12">
          <ul class="carousel-images">
             <CarouselItem
                link="https://github.com/Nzone56/CountriesApp"
-               imageUrl="assets/img/projects/Countries.png"
+               imageUrl="assets/img/Projects/Countries.png"
                title="Countries App"
                description="Discover and explore a dynamic web page showcasing countries worldwide. Search and find detailed information about geography, culture, and history. Expand your knowledge about diverse nations."
             />
             <CarouselItem
                link="https://github.com/Nzone56/react-gif-expert"
-               imageUrl="assets/img/projects/Gif.png"
+               imageUrl="assets/img/Projects/Gif.png"
                title="Gif App"
                description="Search and collect the top 10 trending GIFs related to your query on our dynamic web page. Express yourself with visually engaging animated GIFs in conversations and social media."
             />
 
             <CarouselItem
                link="https://github.com/Nzone56/HeroPage"
-               imageUrl="assets/img/projects/Heroes.png"
+               imageUrl="assets/img/Projects/Heroes.png"
                title="Heroes App"
                description="Discover and explore a dynamic web page featuring DC and Marvel heroes. Search heroes by name and delve into detailed pages with descriptions of their powers and origins."
             />
 
             <CarouselItem
                link="https://github.com/ncondes/sound-scape"
-               imageUrl="assets/img/projects/SoundScape.png"
+               imageUrl="assets/img/Projects/SoundScape.png"
                title="SoundScape"
                description="Explore a dynamic web page for audio enthusiasts, akin to SoundCloud. Discover and enjoy a variety of music and ambient sounds in an immersive experience."
             />
 
             <CarouselItem
                link="https://github.com/Nzone56/KaguyaClonePage"
-               imageUrl="assets/img/projects/Kaguya.png"
+               imageUrl="assets/img/Projects/Kaguya.png"
                title="Kaguya Page"
                description="A recreation of the official Kaguya-sama: Love is War website, a popular anime and manga series."
             />
