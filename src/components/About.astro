@@ -1,16 +1,14 @@
+---
+import Title from './Title.astro'
+---
+
 <script src="/src/helpers/scroll.js"></script>
 
 <section
    id="about"
    class="flex flex-col items-center relative min-h-full h-auto"
 >
-   <h2
-      id="heading-about"
-      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 m-16 text-5xl opacity-0"
-   >
-      ABOUT ME
-      <span class="after w-full"></span>
-   </h2>
+   <Title title="ABOUT ME " id="heading-about" />
    <div class="m-8">
       <p
          id="paragraph-about"

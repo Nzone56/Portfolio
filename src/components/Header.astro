@@ -1,4 +1,5 @@
 ---
+import Navbar from './Navbar.astro'
 import Social from './Social.astro'
 ---
 
@@ -10,48 +11,91 @@ import Social from './Social.astro'
    .navbar-item {
       @apply transition duration-500 ease-out hover:text-turquoise;
    }
+   .hamburger-button {
+      display: none;
+      cursor: pointer;
+      z-index: 999;
+   }
+   .header-logo {
+      z-index: 999;
+   }
+   @media (max-width: 1023px) {
+      .nav-menu {
+         display: none;
+      }
+      .nav-menu.active {
+         display: block;
+      }
+
+      .hamburger-button {
+         display: block;
+      }
+   }
+
+   .hamburger-button:focus {
+      outline: none;
+   }
+   .sidebar-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      background: #000000;
+      padding: 20px;
+      z-index: 998;
+      transition: transform 0.3s ease;
+      transform: translateX(-100%);
+   }
+
+   .sidebar-container.show {
+      transform: translateX(0);
+   }
+
+   .hamburger-button:focus {
+      outline: none;
+   }
 </style>
 
-<div class="flex flex-grow basis-0">
+<div class="w-full lg:w-auto flex justify-between lg:flex-grow lg:basis-0">
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1em"
+      viewBox="0 0 448 512"
+      fill="currentColor"
+      id="hamburger"
+      class="hamburger-button contact-icon ml-0"
+   >
+      <path
+         d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+      ></path></svg
+   >
    <span
-      class="mx-2 font-bold font-logo text-xl transition duration-400 ease-in-out transform hover:scale-125 hover:text-turquoise"
+      class="header-logo lg:mx-2 font-bold font-logo text-xl transition duration-400 ease-in-out transform hover:scale-125 hover:text-turquoise"
    >
       <a href="/"> JP</a></span
    >
 </div>
-<nav>
+<div class="flex flex-col justify-between sidebar-container">
+   <nav class="flex flex-col">
+      <ul
+         class="my-16 text-lg [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+      >
+         <Navbar />
+      </ul>
+   </nav>
+   <div>
+      <hr class="m-4" />
+      <nav class="flex items-center">
+         <Social />
+      </nav>
+   </div>
+</div>
+<nav class="nav-menu">
    <ul class="flex text-lg [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-      <li>
-         <a class="relative navbar-item" href="#">
-            Home<span class="after"></span></a
-         >
-      </li>
-      <li>
-         <a class="relative navbar-item" href="#about">
-            About<span class="after"></span></a
-         >
-      </li>
-      <li>
-         <a class="relative navbar-item" href="#skills">
-            Skills<span class="after"></span></a
-         >
-      </li>
-      <li>
-         <a class="relative navbar-item" href="#projects">
-            Projects<span class="after"></span></a
-         >
-      </li>
-      <li>
-         <a class="relative navbar-item" href="#contact">
-            Contact<span class="after"></span></a
-         >
-      </li>
+      <Navbar />
    </ul>
 </nav>
-<nav class="flex flex-grow basis-0 justify-end">
-   <ul
-      class="flex items-center [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
-   >
-      <Social />
-   </ul>
+<nav class="nav-menu lg:flex flex-grow basis-0 justify-end">
+   <Social />
 </nav>

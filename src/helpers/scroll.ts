@@ -8,6 +8,8 @@ const profs = document.getElementById('profs')
 const headingProject = document.getElementById('heading-project')
 const contentProjects = document.querySelectorAll('#content-project')
 const imageProjects = document.querySelectorAll('#image-project')
+const headingCarousel = document.getElementById('heading-carousel')
+const headingContact = document.getElementById('heading-contact')
 
 export const checkScrollPosition = () => {
    const scrollPosition = document.documentElement.scrollTop
@@ -44,6 +46,13 @@ export const checkScrollPosition = () => {
          imageProject.classList.add('animate-slideIn')
       })
    }
+   if (scrollPosition > 3700) {
+      headingCarousel.classList.add('animate-appearLeft')
+   }
+
+   if (scrollPosition > 4700) {
+      headingContact.classList.add('animate-appearLeft')
+   }
 
    if (scrollPosition < 1000) {
       headingSkills.classList.remove('animate-appearLeft')
@@ -60,6 +69,12 @@ export const checkScrollPosition = () => {
       imageProjects.forEach((imageProject) => {
          imageProject.classList.remove('animate-slideIn')
       })
+   }
+   if (scrollPosition < 3000) {
+      headingCarousel.classList.remove('animate-appearLeft')
+   }
+   if (scrollPosition < 4000) {
+      headingContact.classList.remove('animate-appearLeft')
    }
 }
 

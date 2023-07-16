@@ -1,20 +1,16 @@
 ---
 import Proficiencies from './Proficiencies.astro'
 import Techs from './Techs.astro'
+import Title from './Title.astro'
 ---
 
 <section
    id="skills"
    class="flex flex-col items-center relative min-h-full h-auto bg-bgBlack"
 >
-   <h2
-      id="heading-skills"
-      class="relative font-bold bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-transparent bg-clip-text px-16 py-8 m-16 text-5xl opacity-0"
-   >
-      SKILLS
-      <span class="after w-full"></span>
-   </h2>
-   <div class="flex">
+   <Title title="SKILLS " id="heading-skills" />
+
+   <div class="flex flex-col lg:flex-row">
       <Techs />
       <Proficiencies />
    </div>

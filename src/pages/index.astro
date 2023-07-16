@@ -13,9 +13,13 @@ import Animation from '../components/Animation.astro'
 ---
 
 <Layout title="Julian Pereira | Frontend Developer">
-   <div id="intro" class="flex items-center justify-center w-full h-screen">
+   <div
+      id="intro"
+      class="hidden sm:flex items-center justify-center w-full h-screen"
+   >
       <Animation />
    </div>
+
    <!-- <div id="page" style="display: none"> -->
 
    <!-- FOR CUSTOM SCROLLBAR -->
@@ -24,7 +28,7 @@ import Animation from '../components/Animation.astro'
       id="page"
    > -->
 
-   <div class="h-screen w-full" style="display: none" id="page">
+   <div class="h-screen w-full block sm:hidden" id="page">
       <header
          id="header"
          class="flex px-8 py-6 items-center justify-between fixed top-0 w-full bg-transparent z-10"

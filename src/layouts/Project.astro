@@ -11,20 +11,26 @@ export interface Props {
 const { title, body, githref, pagehref, src, chars } = Astro.props
 ---
 
-<div class="flex text-cyan-600 text-lg">
+<div
+   class="flex flex-col xl:flex-row text-cyan-600 xl:text-lg md:text-md max-w-full w-full"
+>
    <picture
       id="image-project"
-      class="m-16 w-1/2 border-darkTeal items-center opacity-0"
+      class="xl:m-16 xl:w-1/2 w-full border-darkTeal items-center opacity-0"
    >
       <img
          src=`assets/img/Projects/${src}/first.png`
-         alt="CYL Prev image"
-         class="block w-full h-full object-cover"
+         alt=`${src} prev image`
+         class="xl:w-full w-10/12 object-fill m-auto"
          style={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
       /></picture
    >
-   <div id="content-project" class="w-1/2 opacity-0">
-      <h2 class="m-8 text-4xl font-bold">{title}</h2>
+   <div id="content-project" class="xl:w-1/2 opacity-0 mx-8 xl:mx-0">
+      <h2
+         class="m-8 mt-16 text-center xl:text-left text-3xl sm:text-4xl font-bold"
+      >
+         {title}
+      </h2>
       <p class="m-8 text-justify">{body}</p>
       <ul class="m-8">
          {
@@ -37,18 +43,18 @@ const { title, body, githref, pagehref, src, chars } = Astro.props
             })
          }
       </ul>
-      <div class="flex justify-center m-8">
+      <div class="flex justify-center m-0 ml-2 sm:m-8">
          <a
             target="_blank"
             href={pagehref}
-            class="m-4 p-4 border-2 bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-white hover:bg-cyan-600 rounded-md transition duration-500 hover:scale-110"
+            class="m-4 p-4 border-2 bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-white hover:bg-cyan-600 rounded-md text-xs sm:text-md transition duration-500 hover:scale-110"
          >
             VISIT WEBSITE</a
          >
          <a
             target="_blank"
             href={githref}
-            class="m-4 p-4 border-2 border-cyan-600 hover:text-white hover:bg-cyan-600 rounded-md transition duration-500 hover:scale-110"
+            class="m-4 p-4 border-2 border-cyan-600 hover:text-white hover:bg-cyan-600 rounded-md text-xs sm:text-md transition duration-500 hover:scale-110"
          >
             GITHUB REPO</a
          >
