@@ -13,21 +13,6 @@ import Animation from '../components/Animation.astro'
 ---
 
 <Layout title="Julian Pereira | Frontend Developer">
-   <div
-      id="intro"
-      class="hidden sm:flex items-center justify-center w-full h-screen"
-   >
-      <Animation />
-   </div>
-
-   <!-- <div id="page" style="display: none"> -->
-
-   <!-- FOR CUSTOM SCROLLBAR -->
-   <!-- <div
-      class="h-screen w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-turquoise scrollbar-thumb-rounded"
-      id="page"
-   > -->
-
    <div class="h-screen w-full block sm:hidden" id="page">
       <header
          id="header"
@@ -44,13 +29,24 @@ import Animation from '../components/Animation.astro'
       <Footer />
    </div>
 </Layout>
+<div
+   id="intro"
+   class="hidden sm:flex items-center justify-center w-full h-screen"
+>
+   <Animation />
+</div>
 
 <script>
    setTimeout(() => {
       const intro = document.getElementById('intro')
       const page = document.getElementById('page')
-
       intro.style.display = 'none'
       page.style.display = 'block'
    }, 10000)
 </script>
+
+<!-- FOR CUSTOM SCROLLBAR -->
+<!-- <div
+      class="verflow-y-scroll scrollbar-thin scrollbar-thumb-turquoise scrollbar-thumb-rounded"
+      id="page"
+   > -->
