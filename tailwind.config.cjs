@@ -4,15 +4,15 @@ module.exports = {
    theme: {
       extend: {
          animation: {
-            photoIcon: 'fade 1.5s ease-out, initImage 8s linear forwards',
-            header: 'slide-header 9s linear forwards',
-            hi: 'fade-name 10s linear forwards',
-            bg: 'fade-bg 10s linear forwards',
+            photoIcon: 'initImage 5s linear forwards',
+            header: 'slide-header 6s linear forwards',
+            hi: 'fade-name 6s linear forwards',
+            bg: 'fade-bg 6s linear forwards',
 
             typingtic:
-               'typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 7s ease-out forwards',
+               'typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 5s ease-out forwards',
             ticBefore:
-               'blink-caret .75s step-end infinite, fade-name 10s linear forwards',
+               'blink-caret .75s step-end infinite, fade-name 7s linear forwards',
             ticAfter: 'blink-caret .75s step-end infinite',
             appearLeft: 'slideInFromLeft 1s ease-out forwards',
             appearBottom: 'slideInFromBot 1s ease-out forwards',

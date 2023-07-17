@@ -22,7 +22,7 @@ html {
 .portrait {
    width: 112px;
    height: 115px;
-   transform: scale(2.6, 3.3);
+   transform: scale(2.8, 3.3);
 }
 
 .relative {
