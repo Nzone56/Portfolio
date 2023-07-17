@@ -12,7 +12,7 @@ module.exports = {
             typingtic:
                'typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite, initText 5s ease-out forwards',
             ticBefore:
-               'blink-caret .75s step-end infinite, fade-name 7s linear forwards',
+               'blink-caret .75s step-end infinite, fade-name 6.5s linear forwards',
             ticAfter: 'blink-caret .75s step-end infinite',
             appearLeft: 'slideInFromLeft 1s ease-out forwards',
             appearBottom: 'slideInFromBot 1s ease-out forwards',
