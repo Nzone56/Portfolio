@@ -6,6 +6,15 @@ import Title from './Title.astro'
    .input {
       @apply bg-almostBlack px-4 py-2  text-white border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500;
    }
+
+   .disabled {
+      opacity: 0.5;
+      pointer-events: none;
+   }
+
+   .disabled:hover {
+      transform: scale(1);
+   }
 </style>
 
 <section
@@ -52,15 +61,19 @@ import Title from './Title.astro'
             required></textarea>
 
          <button
+            id="myButton"
             type="submit"
             class="w-auto sm:w-1/2 mx-auto mt-8 py-4 px-8 bg-gradient-to-r from-turquoise via-cyan-600 to-blue-900 text-white hover:bg-cyan-600 rounded-md transition duration-500 hover:scale-105"
-            >Submit</button
+         >
+            Submit</button
          >
       </form>
       <span id="msg"> </span>
    </div>
 </section>
 <script>
+   var button = document.getElementById('myButton') as HTMLButtonElement
+
    const scriptURL =
       'https://script.google.com/macros/s/AKfycbyr_gXClrwxa-x8loQjnbHB8Y3q2lBm6PrdSQ94ZHWpdx6bHpjGx3xIBukumx7qlza3Vg/exec'
    const form = document.forms['contact-me']
@@ -68,9 +81,19 @@ import Title from './Title.astro'
 
    form.addEventListener('submit', (e) => {
       e.preventDefault()
+
+      button.disabled = true
+      button.innerHTML = 'Sending...'
+      button.classList.add('disabled')
+
+      console.log(button.disabled)
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
          .then((response) => {
             msg.innerHTML = 'Thanks for your message'
+            button.disabled = false
+            button.innerHTML = 'Submit'
+            button.classList.remove('disabled')
+
             setTimeout(() => (msg.innerHTML = ' '), 5000)
             form.reset()
          })
